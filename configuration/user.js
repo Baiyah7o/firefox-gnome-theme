@@ -17,3 +17,25 @@ user_pref("browser.theme.dark-private-windows", false);
 // Enable rounded bottom window corners
 user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
 
+// Revert ro old backspace to back
+user_pref("browser.backspace_action", 0);
+
+// Disable siteicons
+user_pref("browser.chrome.favicons", false);
+user_pref("browser.chrome.site_icons", false);
+
+// Disable Pocket
+user_pref("browser.pocket.enabled", false);
+user_pref("media.navigator.enabled", false);
+
+// Disable reader
+user_pref("reader.parse-on-load.enabled", false);
+user_pref("reader.parse-on-load.force-enabled", false);
+
+// Disable picture-in-picture
+user_pref("media.videocontrols.picture-in-picture.enabled", false);
+
+// Changens to firefox-gnome-theme default values
+user_pref("gnomeTheme.hideSingleTab", true);
+user_pref("layers.acceleration.force-enabled", true);
+user_pref("gnomeTheme.systemIcons", true);
