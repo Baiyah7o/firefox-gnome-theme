@@ -12,6 +12,7 @@
 
 This theme follows latest GNOME Adwaita style.
 
+> [!WARNING]
 > ### Disclaimer:
 > Be aware that this theme might do things that are not supported by upstream Firefox. If you face an issue while using this theme, report it here first or test if it is reproducible in vanilla Firefox.
 >
@@ -29,7 +30,7 @@ Matrix room: [#firefox-gnome-theme:matrix.org](https://matrix.to/#/#firefox-gnom
 
 ### Firefox versions support
 
-The `master` branch of this repo supports the current Firefox stable release `124`.
+The `master` branch of this repo supports the current Firefox stable release `125`.
 
 Theme versions compatible with older Firefox releases are preserved as git tags.
 
