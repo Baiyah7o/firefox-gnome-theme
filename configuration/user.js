@@ -39,3 +39,8 @@ user_pref("media.videocontrols.picture-in-picture.enabled", false);
 user_pref("gnomeTheme.hideSingleTab", true);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("gnomeTheme.systemIcons", true);
+
+// Disable website translation popups
+user_pref("browser.translations.automaticallyPopup", false);
+user_pref("browser.translations.enable", false);
+user_pref("browser.translations.panelShown", false);
