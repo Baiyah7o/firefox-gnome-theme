@@ -44,3 +44,6 @@ user_pref("gnomeTheme.systemIcons", true);
 user_pref("browser.translations.automaticallyPopup", false);
 user_pref("browser.translations.enable", false);
 user_pref("browser.translations.panelShown", false);
+
+// Increased buffer size against Youtube stuttering
+user_pref("network.http.http3.recvBufferSize", 157286400);
