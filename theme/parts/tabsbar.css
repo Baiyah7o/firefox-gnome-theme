@@ -121,7 +121,6 @@ tabs#tabbrowser-tabs {
 	&[orient="horizontal"] {
 		/* Tab */
 		tab {
-			box-sizing: content-box;
 			border-color: transparent !important;
 			border-left-width: 1px !important;
 			border-style: solid !important;
@@ -283,7 +282,7 @@ tabs#tabbrowser-tabs {
 					position: absolute;
 					right: 2px;
 					top: 2px;
-					transition: background 0.4s linear;
+					transition: opacity 0.2s linear;
 					width: 55px;
 					z-index: 99;
 				}
@@ -688,14 +687,6 @@ tabs#tabbrowser-tabs {
 		}
 		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
 			margin-inline-end: -16px;
-		}
-		/* Override normal width tabs */
-		@media (-moz-bool-pref: "gnomeTheme.normalWidthTabs") {
-			#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:not([pinned]):not([style^="max-width"]),
-			#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"][style^="max-width: 100px !important;"]:not([pinned]) {
-				max-width: 100% !important;
-				--tab-min-width: 131px !important;
-			}
 		}
 	}
 }
