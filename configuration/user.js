@@ -36,7 +36,7 @@ user_pref("reader.parse-on-load.force-enabled", false);
 user_pref("media.videocontrols.picture-in-picture.enabled", false);
 
 // Changens to firefox-gnome-theme default values
-user_pref("gnomeTheme.hideSingleTab", true);
+user_pref("gnomeTheme.hideSingleTab", false);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("gnomeTheme.systemIcons", true);
 
@@ -47,3 +47,14 @@ user_pref("browser.translations.panelShown", false);
 
 // Increased buffer size against Youtube stuttering
 user_pref("network.http.http3.recvBufferSize", 157286400);
+
+// Firefox Data Collection and Use
+user_pref("datareporting.usage.uploadEnabled", false);
+user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
+
+// HTTPS-Only Mode
+user_pref("dom.security.https_only_mode", true);
+
+// Website Advertising Preferences
+user_pref("dom.private-attribution.submission.enabled", false);
