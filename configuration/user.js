@@ -38,7 +38,7 @@ user_pref("media.videocontrols.picture-in-picture.enabled", false);
 // Changens to firefox-gnome-theme default values
 user_pref("gnomeTheme.hideSingleTab", false);
 user_pref("layers.acceleration.force-enabled", true);
-user_pref("gnomeTheme.systemIcons", false);
+user_pref("gnomeTheme.systemIcons", true);
 
 // Disable website translation popups
 user_pref("browser.translations.automaticallyPopup", false);
