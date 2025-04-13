@@ -58,3 +58,6 @@ user_pref("dom.security.https_only_mode", true);
 
 // Website Advertising Preferences
 user_pref("dom.private-attribution.submission.enabled", false);
+
+// Disable Firefox AI link preview
+user_pref("browser.ml.linkPreview.enabled", false);
