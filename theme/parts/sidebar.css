@@ -7,19 +7,26 @@
 	--button-size-icon: var(--gnome-button-size) !important;
 	background-color: var(--gnome-sidebar-background) !important;
 
-	&[positionend] {
-		border-inline-start: 1px solid var(--gnome-toolbar-border-color) !important;
-	}
+	&:not([sidebar-launcher-expanded]) {
+		#tabbrowser-tabs[orient="vertical"] {
+			& .tab-background {
+				margin-inline: calc(var(--tab-inner-inline-margin) / 2) !important;
+			}
 
-	&:not([positionend]) {
-		border-inline-end: 1px solid var(--gnome-toolbar-border-color) !important;
+			& .tab-content {
+				padding: 0 calc(var(--tab-inner-inline-margin) * 1.3) !important;
+			}
+		}
 	}
 }
 
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
-	.tools-and-extensions {
-		align-items: center !important;
+	.buttons-wrapper {
 		justify-content: center !important;
+		min-height: calc(var(--gnome-button-size) + (var(--gnome-toolbar-padding) * 2)) !important;
+	}
+	
+	.tools-and-extensions {		
 		&[orientation="horizontal"] {
 			padding: var(--gnome-toolbar-padding) !important;
 		}
@@ -65,13 +72,19 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 }
 
 /* Separator */
-#sidebar-splitter {
+#sidebar-splitter,
+#sidebar-launcher-splitter {
 	background: var(--gnome-toolbar-background) !important;
 	border: 0 !important;
 	border-right: 1px solid var(--gnome-border-color) !important;
 	border-color: var(--gnome-toolbar-border-color) !important;
 	margin: 0 !important;
 	width: 0 !important;
+}
+
+#sidebar-tools-and-extensions-splitter {
+	background: transparent !important;
+	margin-block: 0 !important;
 }
 
 /* Browser content */
@@ -115,7 +128,7 @@ moz-checkbox, moz-radio {
 	padding: 0 12px !important;
 }
 
-link[href="chrome://global/content/elements/moz-input-common.css"] {
+link[href="chrome://global/content/elements/moz-input-common.css"]:has(~ .nested) {
 	& ~ .label-wrapper {
 		margin-inline: 12px !important;
 		& > label {

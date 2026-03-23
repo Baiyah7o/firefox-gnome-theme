@@ -296,6 +296,9 @@ button.close::before {
 			fill: rgb(46, 52, 54) !important;
 		}
 	}
+	moz-button.close {
+		--message-bar-icon-close-url: var(--gnome-icon-window-close-symbolic) !important;
+	}
 
 	/* Window buttons */
 	:root[customtitlebar] .titlebar-buttonbox .titlebar-close .toolbarbutton-icon {
@@ -308,6 +311,7 @@ button.close::before {
 		list-style-image: var(--gnome-icon-window-restore-symbolic) !important;
 	}
 	:root[customtitlebar][inFullscreen] .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon {
+		background-image: none !important;
 		list-style-image: var(--gnome-icon-view-restore-symbolic) !important;
 	}
 	:root[customtitlebar] .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
@@ -342,16 +346,20 @@ button.close::before {
 		list-style-image: var(--gnome-icon-sidebar-show-right-symbolic);
 	}
 	/* Back button */	
-	#nav-bar #back-button,
-	#context-back { 
+	#nav-bar #back-button { 
 		list-style-image: var(--gnome-icon-go-previous-symbolic) !important;
+	}
+	#context-back { 
+		--menuitem-icon: var(--gnome-icon-go-previous-symbolic) !important;
 	}
 	/* Forward button */	
 	#nav-bar #forward-button,
-	#context-forward,
 	#urlbar-go-button,
 	.search-go-button { 
 		list-style-image: var(--gnome-icon-go-next-symbolic) !important;
+	}
+	#context-forward {
+		--menuitem-icon: var(--gnome-icon-go-next-symbolic) !important;
 	}
 	/* Menu button */
 	#PanelUI-menu-button {
@@ -433,16 +441,18 @@ button.close::before {
 	#urlbar-engine-one-off-item-bookmarks {
 		list-style-image: var(--gnome-icon-starred-symbolic) !important;
 	}
-	#context-bookmarkpage[starred="true"],
-	#star-button[starred] {
-		list-style-image: var(--gnome-icon-starred-symbolic) !important;
+	#context-bookmarkpage {
+		--menuitem-icon: var(--gnome-icon-non-starred-symbolic) !important;
+		&[starred] {
+			--menuitem-icon: var(--gnome-icon-starred-symbolic) !important;
+		}		
 	}
-	#context-bookmarkpage,
 	#star-button {
 		list-style-image: var(--gnome-icon-non-starred-symbolic) !important;
-	}
-	#star-button[starred] {
-		fill: var(--gnome-toolbar-star-button) !important;
+		&[starred] {
+			list-style-image: var(--gnome-icon-starred-symbolic) !important;
+			fill: var(--gnome-toolbar-star-button) !important;
+		}
 	}
 	/* Privacy */
 	#print-button {
@@ -506,16 +516,20 @@ button.close::before {
 	}
 	/* Reload */
 	#reload-button,
-	.downloadIconRetry > .button-box > .button-icon,
-	#context-reload {
+	.downloadIconRetry > .button-box > .button-icon{
 		list-style-image: var(--gnome-icon-view-refresh-symbolic) !important;
+	}
+	#context-reload {
+		--menuitem-icon: var(--gnome-icon-view-refresh-symbolic) !important;
 	}
 	/* Stop */
 	#stop-button,
-	.downloadIconCancel > .button-box > .button-icon,
-	#context-stop {
+	.downloadIconCancel > .button-box > .button-icon{
 		list-style-image: var(--gnome-icon-process-stop-symbolic) !important;
 	}
+	#context-stop {
+		--menuitem-icon: var(--gnome-icon-process-stop-symbolic) !important;
+	}	
 	/* Downlaod */
 	#downloads-button,
 	#downloads-indicator-icon {
@@ -578,13 +592,6 @@ button.close::before {
 	}
 	.urlbar-icon {
 		margin: 2px 0 !important;
-	}
-
-	/* Fix for extensions icons */
-	@media (prefers-color-scheme: dark) {
-		.webextension-browser-action {
-			list-style-image: var(--webextension-menupanel-image-light, inherit) !important;
-		}
 	}
 
 	/* Folder icon */
