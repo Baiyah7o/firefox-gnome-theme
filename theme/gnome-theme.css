@@ -14,6 +14,7 @@
 @import "parts/findbar.css";
 @import "parts/sidebar.css";
 @import "parts/lists.css";
+@import "parts/tabbox.css";
 
 @import "parts/buttons.css";
 @import "parts/buttons-fixes.css";
@@ -43,6 +44,6 @@
 #customization-footer::before {
 	background: url(../icon.svg) no-repeat;
 	background-size: contain;
-	content: "Firefox GNOME theme v143";
+	content: "Firefox GNOME theme v149.1";
 	padding: 9px 9px 9px 50px;
 }
